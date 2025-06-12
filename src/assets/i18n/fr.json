@@ -85,6 +85,10 @@
         }
     },
     "button": {
+        "addProfile":"Ajouter un profil",
+        "addScope":"Ajouter un scope",
+        "addPartner":"Ajouter un partenaire",
+        "refresh":"Refraîchir",
         "save":"Enregistrer"
     }
 }

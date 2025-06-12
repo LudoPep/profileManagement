@@ -2,11 +2,11 @@
     <div class="header">
         <h2>{{ 'profile.title' | translate }}</h2>
         <div class="header-buttons">
-            <button mat-icon-button (click)="openCreateModal()" [matTooltip]="'Add a new profile'" aria-label="Add">
+            <button mat-icon-button (click)="openCreateModal()" [matTooltip]="'button.addProfile' | translate" aria-label="Add">
                 <mat-icon>add</mat-icon>
             </button>
 
-            <button mat-icon-button (click)="refreshProfiles()" [matTooltip]="'Refresh profiles'" aria-label="Refresh">
+            <button mat-icon-button (click)="refreshProfiles()" [matTooltip]="'button.refresh' | translate" aria-label="Refresh">
                 <mat-icon>refresh</mat-icon>
             </button>
         </div>
