@@ -1,0 +1,49 @@
+<form [formGroup]="partnerForm" (ngSubmit)="submit()">
+    
+    <!-- Alias -->
+    <mat-form-field appearance="fill">
+        <mat-label>{{ 'partner.alias' | translate }}</mat-label>
+        <input matInput formControlName="alias"/>
+    </mat-form-field>
+
+    <!-- QueueName -->
+    <mat-form-field appearance="fill">
+        <mat-label>{{ 'partner.queueName' | translate }}</mat-label>
+        <input matInput [matAutocomplete]="auto" formControlName="queueName" />
+        <mat-autocomplete #auto="matAutocomplete">
+            @for (name of queueNames$ | async; track name) {
+                <mat-option [value]="name">{{ name }}</mat-option>
+            }
+        </mat-autocomplete>
+    </mat-form-field>
+
+    <!-- Application -->
+    @if (['PRINTER', 'S3'].includes(partnerForm.get('hostingType')?.value)) {
+        <mat-form-field appearance="fill">
+            <mat-label>{{ 'partner.application' | translate }}</mat-label>
+            <input matInput formControlName="application" />
+        </mat-form-field>
+    }
+
+    <!-- Description -->
+    <mat-form-field appearance="fill">
+        <mat-label>{{ 'partner.description' | translate }}</mat-label>
+        <input matInput formControlName="description" />
+    </mat-form-field>
+
+    <!-- HostingType -->
+    <mat-form-field appearance="fill">
+        <mat-label>{{ 'partner.hostingType' | translate }}</mat-label>
+        <mat-select formControlName="hostingType">
+            @for (hostingType of hostingTypes(); track hostingType) {
+                <mat-option [value]="hostingType">{{ hostingType }}</mat-option>
+            }
+        </mat-select>
+    </mat-form-field>
+
+    <div class="save-button">
+        <button mat-raised-button color="primary" type="submit" [disabled]="partnerForm.invalid">
+            {{ 'button.save' | translate }}
+        </button>
+    </div>
+</form>

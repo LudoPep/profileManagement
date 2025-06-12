@@ -1,0 +1,51 @@
+<form [formGroup]="profileForm" (ngSubmit)="submit()">
+    
+    <!-- Code -->
+    <mat-form-field appearance="fill">
+        <mat-label>{{ 'profile.code' | translate }}</mat-label>
+        <input matInput formControlName="code" maxlength="10"/>
+        @if (profileForm.get('code')?.hasError('pattern')) {
+            <mat-error>{{ 'profile.form.error.codePattern' | translate }}</mat-error>
+        }
+        @if (profileForm.get('code')?.hasError('minLength')) {
+            <mat-error>{{ 'profile.form.error.codeMinLength' | translate }}</mat-error>
+        }
+        @if (profileForm.get('code')?.hasError('required')) {
+            <mat-error>{{ 'profile.form.error.codeRequired' | translate }}</mat-error>
+        }
+    </mat-form-field>
+
+    <!-- Description -->
+    <mat-form-field appearance="fill">
+        <mat-label>{{ 'profile.description' | translate }}</mat-label>
+        <input matInput formControlName="description" maxlength="30" />
+        @if (profileForm.get('description')?.hasError('minLength')) {
+            <mat-error>{{ 'profile.form.error.descriptionMinLength' | translate }}</mat-error>
+        }
+        @if (profileForm.get('description')?.hasError('required')) {
+            <mat-error>{{ 'profile.form.error.descriptionRequired' | translate }}</mat-error>
+        }
+    </mat-form-field>
+
+    <!-- Scope -->
+    @if (availableScopes().length > 0) {
+        <mat-form-field appearance="fill">
+        <mat-label>{{ 'profile.form.scope' | translate }}</mat-label>
+            <mat-select formControlName="scope">
+                @for (scope of availableScopes(); track scope.name) {
+                    <mat-option [value]="scope">{{ scope.name }}</mat-option>
+                }
+            </mat-select>
+            
+            @if (profileForm.get('scope')?.hasError('required')) {
+                <mat-error>{{ 'profile.form.error.scopeRequired' | translate }}</mat-error>
+            }
+        </mat-form-field>
+    }
+
+    <div class="save-button">
+        <button mat-raised-button color="primary" type="submit" [disabled]="profileForm.invalid">
+            {{ 'button.save' | translate }}
+        </button>
+    </div>
+</form>

@@ -1,0 +1,90 @@
+{
+    "title":"Gestion de profils",
+    "profil":"Profils",
+    "settings":"Paramètres",
+    "scopes":"Scopes",
+    "partners":"Partenaires",
+    
+    "profile": {
+        "title":"Profils",
+        "code":"Code",
+        "description":"Description",
+        "scopeName":"Nom du scope",
+        "scopeRank":"Rang du scope",
+        "creationDate":"Créé le",
+        "updateDate":"Modifié le",
+
+        "form": {
+            "scope":"Scope",
+            "createTitle":"Ajouter un profil",
+            "updateTitle":"Modifier un profil",
+
+            "toastr": {
+                "creationSuccess":"Profil créé",
+                "creationError":"Erreur lors de la création du profil",
+                "updateSuccess":"Profil modifié",
+                "updateError":"Erreur lors de la modification du profil"
+            },
+
+            "error": {
+                "codePattern":"Le code doit contenir des chiffres et des lettres, et ne doit pas contenir les catactères suivants : \", #, !, &, _",
+                "codeMinLength":"Le code doit contenir au minimum 5 caractères",
+                "codeRequired":"Le code est requis",
+                "descriptionMinLength":"La description doit contenir au minimum 10 caractères",
+                "descriptionRequired":"La description est requise",
+                "scopeRequired":"Le scope est requis"
+            }
+        }
+    },
+    "scope": {
+        "title":"Scopes",
+        "rank":"Rang",
+        "scope":"Scope",
+        "description":"Description",
+        "comment":"Commentaire",
+        "condition":"Condition",
+        
+        "form": {
+            "createTitle":"Ajouter un scope",
+
+            "toastr": {
+                "alreadyExists":"Le rank existe déjà",
+                "creationSuccess":"Scope créé",
+                "creationError":"Erreur lors de la création du scope",
+                "updateSuccess":"Scope modifié",
+                "updateError":"Erreur lors de la modification du scope"
+            },
+
+            "error": {
+                "rankRequired":"Le rang est requis",
+                "rankPattern":"Le rang ne doit contenir que des chiffres",
+                "nameRequired":"Le nom du scope est requis",
+                "descriptionRequired":"La description est requise"
+            }
+        }
+    },
+    "partner": {
+        "title":"Partenaires",
+        "status":"Stratut",
+        "hostingType":"Hôte",
+        "alias":"Alias",
+        "queueName":"Nom de file",
+        "application":"Application",
+        "description":"Description",
+
+        "form": {
+            "createTitle":"Ajouter un partenaire",
+            "updateTitle":"Modifier un partenaire",
+
+            "toastr": {
+                "creationSuccess":"Partenaire créé",
+                "creationError":"Erreur lors de la création du partenaire",
+                "updateSuccess":"Partenaire modifié",
+                "updateError":"Erreur lors de la modification du partenaire"
+            }
+        }
+    },
+    "button": {
+        "save":"Enregistrer"
+    }
+}

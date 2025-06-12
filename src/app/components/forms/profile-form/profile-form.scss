@@ -1,0 +1,16 @@
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 24px;
+}
+
+mat-form-field {
+  flex: 1 1 calc(50% - 24px);
+  min-width: 200px;
+}
+
+.save-button {
+  flex-basis: 100%;
+  margin-top: 16px;
+  align-self: right;
+}

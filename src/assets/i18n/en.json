@@ -1,0 +1,89 @@
+{
+    "title": "Profils Management",
+    "profil":"Profiles",
+    "settings":"Settings",
+    "scopes":"Scopes",
+    "partners":"Partners",
+
+    "profile": {
+        "title":"Profiles",
+        "code":"Code",
+        "description":"Description",
+        "scopeName":"Scope Name",
+        "scopeRank":"Scope Rank",
+        "creationDate":"Created on",
+        "updateDate":"Updated on",
+
+        "form": {
+            "scope":"Scope",
+            "createTitle":"Add a profile",
+            "updateTitle":"Update a profile",
+
+            "toastr": {
+                "creationSuccess":"Profile created",
+                "creationError":"Error creating the new profile",
+                "updateSuccess":"Profile updated",
+                "updateError":"Error updating the profile"
+            },
+
+            "error": {
+                "codePattern":"The code must contain both letters and numbers, and must not contain the following characters: \", #, !, &, _",
+                "codeMinLength":"The code must contain at least 5 characters",
+                "codeRequired":"The code is required",
+                "descriptionMinLength":"The description must contain at least 10 caractères",
+                "descriptionRequired":"The description is required",
+                "scopeRequired":"The scope is required"
+            }
+        }
+    },
+    "scope": {
+        "title":"Scopes",
+        "rank":"Rank",
+        "description":"Description",
+        "comment":"Comment",
+        "condition":"Condition",
+        
+        "form": {
+            "createTitle":"Add a scope",
+
+            "toastr": {
+                "alreadyExists":"The rank already exists",
+                "creationSuccess":"Scope created",
+                "creationError":"Error creating the scope",
+                "updateSuccess":"Scope updated",
+                "updateError":"Error updating the scope"
+            },
+
+            "error": {
+                "rankRequired":"The rank is required",
+                "rankPattern":"The rank must not contain numbers only",
+                "nameRequired":"The scope name is required",
+                "descriptionRequired":"The description is required"
+            }
+        }
+    },
+    "partner": {
+        "title":"Partners",
+        "status":"Stratus",
+        "hostingType":"Hosting Type",
+        "alias":"Alias",
+        "queueName":"Queue Name",
+        "application":"Application",
+        "description":"Description",
+
+        "form": {
+            "createTitle":"Add a partner",
+            "updateTitle":"Update a partner",
+
+            "toastr": {
+                "creationSuccess":"Partner created",
+                "creationError":"Error creating the partner",
+                "updateSuccess":"Partner updated",
+                "updateError":"Error updating the partner"
+            }
+        }
+    },
+    "button": {
+        "save":"Save"
+    }
+}

@@ -1,0 +1,50 @@
+<form [formGroup]="scopeForm" (ngSubmit)="submit()">
+
+    <!-- Rank -->
+    <mat-form-field appearance="fill">
+        <mat-label>{{ 'scope.rank' | translate }}</mat-label>
+        <input matInput formControlName="rank" maxlength="3"/>
+        @if (scopeForm.get('rank')?.hasError('required')) {
+            <mat-error>{{ 'scope.form.error.rankRequired' | translate }}</mat-error>
+        }
+        @if (scopeForm.get('rank')?.hasError('pattern')) {
+            <mat-error>{{ 'scope.form.error.rankPattern' | translate }}</mat-error>
+        }
+    </mat-form-field>
+
+    <!-- Name -->
+    <mat-form-field appearance="fill">
+        <mat-label>{{ 'scope.scope' | translate }}</mat-label>
+        <input matInput formControlName="name" />
+        @if (scopeForm.get('name')?.hasError('required')) {
+            <mat-error>{{ 'scope.form.error.scopeRequired' | translate }}</mat-error>
+        }
+    </mat-form-field>
+
+    <!-- Description -->
+    <mat-form-field appearance="fill">
+        <mat-label>{{ 'scope.description' | translate }}</mat-label>
+        <input matInput formControlName="description" />
+        @if (scopeForm.get('description')?.hasError('required')) {
+            <mat-error>{{ 'scope.form.error.descriptionRequired' | translate }}</mat-error>
+        }
+    </mat-form-field>
+
+    <!-- Comment -->
+    <mat-form-field appearance="fill">
+        <mat-label>{{ 'scope.comment' | translate }}</mat-label>
+        <input matInput formControlName="comment" />
+    </mat-form-field>
+
+    <!-- Condition -->
+    <mat-form-field appearance="fill">
+        <mat-label>{{ 'scope.condition' | translate }}</mat-label>
+        <input matInput formControlName="condition" />
+    </mat-form-field>
+
+    <div class="save-button">
+        <button mat-raised-button color="primary" type="submit" [disabled]="scopeForm.invalid">
+            {{ 'button.save' | translate }}
+        </button>
+    </div>
+</form>

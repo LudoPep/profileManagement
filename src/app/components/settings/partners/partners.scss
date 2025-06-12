@@ -1,0 +1,39 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.tab {
+    margin-top: 3em;
+}
+
+mat-icon {
+    cursor: pointer;
+}
+
+th:nth-child(odd), th:nth-child(even) {
+    background-color: #dedede;
+}
+
+tr:nth-child(even) {
+    background-color: #f5f5f5;
+}
+
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+.active {
+    color: rgb(56, 160, 73);
+}
+
+.inactive {
+    color: rgb(225, 33, 33);
+}

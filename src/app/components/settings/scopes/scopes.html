@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="header">
+        <h2>{{ 'scope.title' | translate }}</h2>
+        <div class="header-buttons">
+            <button mat-icon-button (click)="openCreateModal()" [matTooltip]="'Add a new scope'" aria-label="Add">
+                <mat-icon>add</mat-icon>
+            </button>
+
+            <button mat-icon-button (click)="refreshScopes()" [matTooltip]="'Refresh scopes'" aria-label="Refresh">
+                <mat-icon>refresh</mat-icon>
+            </button>
+        </div>
+    </div>
+
+    <div class="tab">
+        <table mat-table [dataSource]="scopes()" >
+
+            <!-- Rank -->
+            <ng-container matColumnDef="rank">
+                <th mat-header-cell *matHeaderCellDef> {{ 'scope.rank' | translate }} </th>
+                <td mat-cell *matCellDef="let scope"> {{ scope.rank }} </td>
+            </ng-container>
+
+            <!-- Name -->
+            <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef> {{ 'scope.scope' | translate }} </th>
+                <td mat-cell *matCellDef="let scope"> {{ scope.name }} </td>
+            </ng-container>
+
+            <!-- Description -->
+            <ng-container matColumnDef="description">
+                <th mat-header-cell *matHeaderCellDef> {{ 'scope.description' | translate }} </th>
+                <td mat-cell *matCellDef="let scope"> {{ scope.description }} </td>
+            </ng-container>
+
+            <!-- Comment -->
+            <ng-container matColumnDef="comment">
+                <th mat-header-cell *matHeaderCellDef> {{ 'scope.comment' | translate }} </th>
+                <td mat-cell *matCellDef="let scope"> {{ scope.comment }} </td>
+            </ng-container>
+
+            <!-- Condition -->
+            <ng-container matColumnDef="condition">
+                <th mat-header-cell *matHeaderCellDef> {{ 'scope.condition' | translate }} </th>
+                <td mat-cell *matCellDef="let scope"> {{ scope.condition }} </td>
+            </ng-container>
+
+            <!-- Header and Rows -->
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+    </div>
+</div>
