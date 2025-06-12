@@ -46,12 +46,12 @@ export class PartnerForm {
     private translate: TranslateService
   ) {
     this.partnerForm = this.fb.group({
-      alias: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(30)]],
-      queueName: ['', Validators.required],
-      hostingType: ['', Validators.required],
-      status: [{ value: '', disabled: this.data.mode === 'edit' }, Validators.required],
-      application: ['', Validators.required],
-      description: ['', Validators.required],
+      alias: [''],
+      queueName: [''],
+      hostingType: [''],
+      status: [{ value: '', disabled: this.data.mode === 'edit' }],
+      application: [''],
+      description: [''],
     });
 
     if (data.mode === 'edit' && data.partner) {

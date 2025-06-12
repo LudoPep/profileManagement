@@ -69,20 +69,20 @@ export class ProfileForm {
       this.profileService.createNewProfile(value).subscribe({
         next: () => {
           this.dialogRef.close();
-          this.toastr.success(this.translate.instant('profile.form.toaster.creationSuccess'));
+          this.toastr.success(this.translate.instant('profile.form.toastr.creationSuccess'));
         },
         error: () => {
-          this.toastr.error(this.translate.instant('profile.form.toaster.creationError'));
+          this.toastr.error(this.translate.instant('profile.form.toastr.creationError'));
         }
       });
     } else if (this.data.mode === 'edit' && this.data.profile?.id !== undefined) {
       this.profileService.updateProfile(this.data.profile.id, value).subscribe({
         next: () => {
           this.dialogRef.close();
-          this.toastr.success(this.translate.instant('profile.form.toaster.updateSuccess'));
+          this.toastr.success(this.translate.instant('profile.form.toastr.updateSuccess'));
         },
         error: () => {
-          this.toastr.error(this.translate.instant('profile.form.toaster.updateError'));
+          this.toastr.error(this.translate.instant('profile.form.toastr.updateError'));
         }
       });
     }

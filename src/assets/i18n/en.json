@@ -88,6 +88,7 @@
         "addScope":"Add a new scope",
         "addPartner":"Add a new partner",
         "refresh":"Refresh",
+        "update":"Update",
         "save":"Save"
     }
 }
